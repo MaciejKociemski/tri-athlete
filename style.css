@@ -1,7 +1,8 @@
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
 }
+
 body {
   display: flex;
   align-items: center;
@@ -22,8 +23,8 @@ label {
 
 canvas {
   /* background-image:url("./img/fitness-center-1259302_1920.jpg") ; */
-  width: 200px;
-  background-size:cover;
+  width: 30%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #000;
@@ -59,7 +60,6 @@ button:hover {
   color: #fff;
 }
 
-
 .footer {
   position: fixed;
   bottom: 0;
@@ -71,3 +71,39 @@ button:hover {
 }
 
 a {color: rgb(59, 112, 161);font-size: 14px;}
+
+
+@media only screen and (max-width: 600px) {
+    input {
+        width: 70%;
+    }
+
+    button {
+        width: 70%;
+    }
+}
+
+
+.joke-text {
+   display: none;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: bold;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+.show {
+  display: block;
+}
